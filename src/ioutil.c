@@ -1,4 +1,5 @@
 #include "ioutil.h"
+#include "type.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,7 +20,7 @@ int read_all(FILE *in, char **dataptr, size_t *sizeptr) {
         return READALL_ERROR;
     }
 
-    while (!0)
+    while (TRUE)
     {
         if ((used + READALL_CHUNK + 1) > 1) {
             size = used + READALL_CHUNK + 1;
